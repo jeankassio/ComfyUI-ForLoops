@@ -1,0 +1,236 @@
+{
+  "id": "df570289-47ff-4be1-b5a7-c8d8a55646a2",
+  "revision": 0,
+  "last_node_id": 6,
+  "last_link_id": 7,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "JkForOpen",
+      "pos": [
+        120,
+        200
+      ],
+      "size": [
+        260,
+        122
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "initial_value",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "flow",
+          "type": "JK_FOR_FLOW",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "index",
+          "type": "INT",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "value",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JkForOpen"
+      },
+      "widgets_values": [
+        0,
+        5
+      ]
+    },
+    {
+      "id": 6,
+      "type": "JWIntegerToString",
+      "pos": [
+        399.4456863035078,
+        294.55744592668356
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "widget": {
+            "name": "value"
+          },
+          "link": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-various",
+        "ver": "5bd85aaf7616878471469c4ec7e11bbd0cef3bf2",
+        "Node name for S&R": "JWIntegerToString"
+      },
+      "widgets_values": [
+        0,
+        "{:04d}"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "SaveText|pysssss",
+      "pos": [
+        583.473553938599,
+        326.2101956240497
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "SaveText|pysssss"
+      },
+      "widgets_values": [
+        "output",
+        "file.txt",
+        "append",
+        true
+      ]
+    },
+    {
+      "id": 2,
+      "type": "JkForClose",
+      "pos": [
+        915.9096997578941,
+        203.6805499394734
+      ],
+      "size": [
+        240,
+        80
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "flow",
+          "type": "JK_FOR_FLOW",
+          "link": 1
+        },
+        {
+          "name": "value",
+          "shape": 7,
+          "type": "*",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JkForClose"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "JK_FOR_FLOW"
+    ],
+    [
+      5,
+      5,
+      0,
+      2,
+      1,
+      "STRING"
+    ],
+    [
+      6,
+      1,
+      1,
+      6,
+      0,
+      "INT"
+    ],
+    [
+      7,
+      6,
+      0,
+      5,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.8113207547169816,
+      "offset": [
+        -11.515119515788033,
+        -43.359512411770204
+      ]
+    },
+    "frontendVersion": "1.42.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
