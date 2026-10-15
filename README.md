@@ -1,3 +1,4 @@
+[![Somora](https://somora.media/assets/somora-github-en.png)](https://somora.media)
 # JkNodes — ForLoop
 
 🌐 **English** · [Português](README_PTBR.md)
